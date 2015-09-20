@@ -25,12 +25,8 @@ First, we load input data from the current R working directory.
 ```{r, echo=TRUE}
 
 # the lines below can be used to extract zip
-#td = tempdir()
-#tf = tempfile(tmpdir=td, fileext=".zip")
-#fname = "activity.zip"
-#unzip(tf, files=fname, exdir=td, overwrite=TRUE)
-#fpath = file.path(td, fname)
-#data <- read.csv(fpath, as.is=TRUE)
+fname = "activity.zip"
+unzip(fname, files="activity.csv", overwrite=TRUE)
 
 data <- read.csv("activity.csv", stringsAsFactors = FALSE)
 

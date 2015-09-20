@@ -19,6 +19,10 @@ First, we load input data from the current R working directory.
 
 
 ```r
+# the lines below can be used to extract zip
+fname = "activity.zip"
+unzip(fname, files="activity.csv", overwrite=TRUE)
+
 data <- read.csv("activity.csv", stringsAsFactors = FALSE)
 
 # convert date column to date  type

@@ -72,7 +72,11 @@ img {
 <p><strong>interval</strong>: Identifier for the 5-minute interval in which measurement was taken</p>
 <p>The dataset contains a total of 17,568 observations in this dataset.</p>
 <p>First, we load input data from the current R working directory.</p>
-<pre class="r"><code>data &lt;- read.csv(&quot;activity.csv&quot;, stringsAsFactors = FALSE)
+<pre class="r"><code># the lines below can be used to extract zip
+fname = &quot;activity.zip&quot;
+unzip(fname, files=&quot;activity.csv&quot;, overwrite=TRUE)
+
+data &lt;- read.csv(&quot;activity.csv&quot;, stringsAsFactors = FALSE)
 
 # convert date column to date  type
 data$date &lt;- as.Date(data$date, &quot;%Y-%m-%d&quot;)</code></pre>
